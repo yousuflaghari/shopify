@@ -1,0 +1,14 @@
+.nav-link {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: aliceblue;
+  text-decoration: none;
+}
+.nav-container {
+  background-color: rgb(42, 40, 40);
+  border: 1px solid;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.paragraph {
+  margin: 0px;
+}
+.heading {
+  margin-bottom: 0px;
+}
+
+.container {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.or {
+  margin: 0px;
+}
