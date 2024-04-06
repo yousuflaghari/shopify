@@ -5,25 +5,26 @@ const Topbar = () => {
   return (
     <div className="nav-main">
       <div className="nav-container">
-        <a className="nav-link" href="/">
-          Home
+        <a className="nav-link" href="/Laptops">
+          Laptops
         </a>
-        <a className="nav-link" href="/about">
-          About
+        <a className="nav-link" href="/Fragrances">
+          Fragrances
         </a>
-        <a className="nav-link" href="/navbar">
-          Navbar
+        <a className="nav-link" href="/Skincare">
+          Skincare
         </a>
-        <a className="nav-link" href="/link">
-          Link
+        <a className="nav-link" href="/Groceries">
+          Groceries
         </a>
-        <a className="nav-link" href="/dropdown">
-          Dropdown
+        <a className="nav-link" href="/Smartphones">
+          Smartphones
         </a>
+
         <Avatar
-          src={require("./assets/yousuf.jpg")}
+          src={require("../assets/yousuf.jpg")}
           alt="yousuf"
-          className="img"
+          className="topbar-img"
         />
       </div>
     </div>

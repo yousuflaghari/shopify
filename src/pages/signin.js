@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Input from "../components/input";
-import "./signinpage.css";
+import "./signin.css";
 import Button from "../components/button";
 import axios from "axios";
 
-const Signinpage = () => {
+const Signin = () => {
   const [Name, setName] = useState("");
   const [Password, setPassword] = useState("");
 
@@ -13,13 +13,13 @@ const Signinpage = () => {
 
     try {
       const response = await axios.post("https://dummyjson.com/auth/login", {
-        username: Name,
-        password: Password,
+        username: "kminchelle",
+        password: "0lelplR",
         expiresInMins: 30,
       });
       console.log(response, "aaaaaaaa");
-      const data = response.json();
-      console.log(data);
+      const data = response.data;
+      console.log(data.lastName);
     } catch (error) {
       console.error("Error:", error.message);
     }
@@ -36,9 +36,9 @@ const Signinpage = () => {
 
   return (
     <div className="main">
-      <div className="container">
+      <div className="container1">
         <div>
-          <h1 className="heading">Sign in</h1>
+          <h1 className="heading1">Sign in</h1>
           <h6 className="paragraph">Stay updated on your professional world</h6>
         </div>
         <Input
@@ -49,7 +49,12 @@ const Signinpage = () => {
           placeholder="Password"
           onChange={(e) => handleChange(e, "password")}
         />
-        <Button text="Sign in" backgroundColor="blue" onClick={handleClick} />
+        <Button
+          text="Sign in"
+          backgroundColor="blue"
+          color="white"
+          onClick={handleClick}
+        />
         <p className="or">or</p>
         <Button text="Sign in with Apple" backgroundColor="white" />
       </div>
@@ -57,4 +62,4 @@ const Signinpage = () => {
   );
 };
 
-export default Signinpage;
+export default Signin;
