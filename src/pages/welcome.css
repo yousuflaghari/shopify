@@ -1,0 +1,19 @@
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 90px;
+}
+
+.wt {
+  color: #f12121;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.fm {
+  color: rgb(247, 37, 37);
+  font-size: 139px;
+  margin-top: 0px;
+}

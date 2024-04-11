@@ -13,7 +13,7 @@ const Laptop = () => {
           "https://dummyjson.com/products/category/laptops"
         );
         const { products } = response.data;
-        console.log("aaaaaaaaa", products);
+        console.log(products.type);
         setLaptops(products);
       } catch (error) {
         console.error("Error fetching laptops:", error);
