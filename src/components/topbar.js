@@ -8,28 +8,29 @@ import {
   faBars,
   faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
+
 const Topbar = () => {
   return (
     <div className="nav-main">
       <div className="nav-container">
-        <Link to="./Welcome">
+        <Link to="/Welcome">
           <FontAwesomeIcon icon={faBars} size="2x" color="white" />
         </Link>
-        <a className="nav-link" href="/Laptops">
+        <Link className="nav-link" to="/Laptops">
           Laptops
-        </a>
-        <a className="nav-link" href="/Fragrances">
+        </Link>
+        <Link className="nav-link" to="/Fragrances">
           Fragrances
-        </a>
-        <a className="nav-link" href="/Skincare">
+        </Link>
+        <Link className="nav-link" to="/Skincare">
           Skincare
-        </a>
-        <a className="nav-link" href="/Groceries">
+        </Link>
+        <Link className="nav-link" to="/Groceries">
           Groceries
-        </a>
-        <a className="nav-link" href="/Smartphones">
+        </Link>
+        <Link className="nav-link" to="/Smartphones">
           Smartphones
-        </a>
+        </Link>
 
         <div className="avt-btn">
           <Link to="/cartitems">

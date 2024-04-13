@@ -1,0 +1,8 @@
+/* cart-item.css */
+.cart-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}

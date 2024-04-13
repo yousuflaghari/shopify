@@ -3,7 +3,7 @@ import axios from "axios";
 import Card from "../components/card";
 import "./laptop.css";
 
-const Laptop = () => {
+const Laptop = ({ setCartItem }) => {
   const [laptops, setLaptops] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,6 @@ const Laptop = () => {
           "https://dummyjson.com/products/category/laptops"
         );
         const { products } = response.data;
-        console.log(products.type);
         setLaptops(products);
       } catch (error) {
         console.error("Error fetching laptops:", error);
@@ -28,7 +27,12 @@ const Laptop = () => {
       <h1 className="heading">Laptop Products</h1>
       <div className="container">
         {laptops.map((laptop, index) => (
-          <Card key={index} profile={laptop} index={index} />
+          <Card
+            key={index}
+            profile={laptop}
+            index={index}
+            setCartItem={setCartItem}
+          />
         ))}
       </div>
     </div>
