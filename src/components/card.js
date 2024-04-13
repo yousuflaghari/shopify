@@ -1,16 +1,14 @@
-import { React, useState, useEffect } from "react";
+import { React } from "react";
 import Avatar from "./avatar";
 import "./card.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-const Card = ({ profile, index }) => {
-  const [cartItem, setCartItem] = useState([]);
-
+const Card = ({ profile, index, setCartItem }) => {
   const handleClick = () => {
-    setCartItem(profile);
+    console.log("profile", profile);
+    setCartItem((item) => [...item, profile]);
   };
-  console.log("Cart Item:", cartItem);
 
   return (
     <div key={index} className="profile">
@@ -28,7 +26,7 @@ const Card = ({ profile, index }) => {
           <div className="option">
             <FontAwesomeIcon
               icon={faCartShopping}
-              size="large"
+              size="lg"
               color="red"
               style={{ marginTop: "10px" }}
               onClick={handleClick}

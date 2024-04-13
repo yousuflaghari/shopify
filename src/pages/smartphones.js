@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/card";
 
-const Smartphones = () => {
+const Smartphones = ({ setCartItem }) => {
   const [smartphones, setSmartphones] = useState([]);
 
   useEffect(() => {
@@ -27,7 +27,12 @@ const Smartphones = () => {
       <h1 className="heading">Smartphones</h1>
       <div className="container">
         {smartphones.map((phone, index) => (
-          <Card key={index} index={index} profile={phone} />
+          <Card
+            key={index}
+            index={index}
+            profile={phone}
+            setCartItem={setCartItem}
+          />
         ))}
       </div>
     </div>
