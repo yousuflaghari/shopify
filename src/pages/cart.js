@@ -1,11 +1,12 @@
 import React from "react";
 import Avatar from "../components/avatar";
+import { useSelector } from "react-redux";
 
-const Cartitems = ({ cartItem }) => {
-  console.log("yousuf", cartItem);
+const Cart = () => {
+  const cart = useSelector((state) => state.cart);
   return (
     <div>
-      {cartItem.map((item, index) => (
+      {cart.map((item, index) => (
         <div key={index} className="cart-item">
           <Avatar
             src={item.images[0]}
@@ -21,4 +22,4 @@ const Cartitems = ({ cartItem }) => {
   );
 };
 
-export default Cartitems;
+export default Cart;

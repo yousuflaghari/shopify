@@ -3,7 +3,7 @@ import axios from "axios";
 import Card from "../components/card";
 import "./laptop.css";
 
-const Laptop = ({ setCartItem }) => {
+const Laptop = () => {
   const [laptops, setLaptops] = useState([]);
 
   useEffect(() => {
@@ -27,12 +27,7 @@ const Laptop = ({ setCartItem }) => {
       <h1 className="heading">Laptop Products</h1>
       <div className="container">
         {laptops.map((laptop, index) => (
-          <Card
-            key={index}
-            profile={laptop}
-            index={index}
-            setCartItem={setCartItem}
-          />
+          <Card key={index} profile={laptop} index={index} />
         ))}
       </div>
     </div>

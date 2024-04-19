@@ -33,7 +33,7 @@ const Topbar = () => {
         </Link>
 
         <div className="avt-btn">
-          <Link to="/cartitems">
+          <Link to="/cart">
             <FontAwesomeIcon
               icon={faCartShopping}
               size="2x"

@@ -1,13 +1,15 @@
 import { React } from "react";
 import Avatar from "./avatar";
 import "./card.css";
+import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
-const Card = ({ profile, index, setCartItem }) => {
+import { addItem } from "../redux/actions/action";
+const Card = ({ profile, index }) => {
+  const dispatch = useDispatch();
   const handleClick = () => {
     console.log("profile", profile);
-    setCartItem((item) => [...item, profile]);
+    dispatch(addItem(profile));
   };
 
   return (
